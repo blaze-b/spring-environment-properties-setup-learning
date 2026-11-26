@@ -1,6 +1,6 @@
 # Spring Properties Setup Learning
 
-Hands-on chapters for Spring Boot **properties**, **profiles**, **externalised config**, and **secrets** (Jasypt, Spring Cloud Config, Vault, AWS Parameter Store, Kubernetes). Each module is a small runnable app with tests.
+Hands-on modules for Spring Boot **properties**, **profiles**, **externalised config**, and **secrets** (Jasypt, Spring Cloud Config, Vault, AWS Parameter Store, Kubernetes). Each module is a small runnable app with tests.
 
 [![CI](https://github.com/blaze-b/spring-properties-setup-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/blaze-b/spring-properties-setup-learning/actions/workflows/ci.yml)
 
@@ -18,27 +18,27 @@ Spring Boot resolves configuration from many property sources. Later sources ove
 
 Never commit real secrets. This repo uses obvious placeholders (`changeme`, documented Vault **dev** tokens only).
 
-## Chapters
+## Modules
 
-| Chapter | Title | Module | Summary |
-| --- | --- | --- | --- |
-| 1 | [Properties vs YAML](chapter-01-properties-yaml/README.md) | `chapter-01-properties-yaml` | YAML nesting, `.properties` equivalents, relaxed binding |
-| 2 | [Profiles](chapter-02-profiles/README.md) | `chapter-02-profiles` | `local` / `dev` / `prod` files and env placeholders |
-| 3 | [Configuration Properties](chapter-03-configuration-properties/README.md) | `chapter-03-configuration-properties` | `@ConfigurationProperties` + Bean Validation |
-| 4 | [Externalised Config](chapter-04-externalized-config/README.md) | `chapter-04-externalized-config` | Env vars, CLI, `config.import`, `.env.example` |
-| 5 | [Jasypt](chapter-05-jasypt/README.md) | `chapter-05-jasypt` | `ENC(...)` values; master password from the environment |
-| 6 | [Config Server](chapter-06-config-server/README.md) | `chapter-06-config-server` | Spring Cloud Config Server (native backend) |
-| 7 | [Config Client](chapter-07-config-client/README.md) | `chapter-07-config-client` | Config client with optional server + local fallback |
-| 8 | [HashiCorp Vault](chapter-08-vault/README.md) | `chapter-08-vault` | Spring Cloud Vault + docker-compose Vault `-dev` |
-| 9 | [AWS Parameter Store](chapter-09-aws-parameter-store/README.md) | `chapter-09-aws-parameter-store` | SSM paths via Spring Cloud AWS (LocalStack optional) |
-| 10 | [Kubernetes ConfigMaps & Secrets](chapter-10-kubernetes/README.md) | `chapter-10-kubernetes` | ConfigMap/Secret manifests bound as env vars |
+| Module | Covers | Link |
+| --- | --- | --- |
+| `config-yaml` | YAML nesting, `.properties` equivalents, relaxed binding | [README](config-yaml/README.md) |
+| `config-profiles` | `local` / `dev` / `prod` files and env placeholders | [README](config-profiles/README.md) |
+| `config-configuration-properties` | `@ConfigurationProperties` + Bean Validation | [README](config-configuration-properties/README.md) |
+| `config-externalized` | Env vars, CLI, `config.import`, `.env.example` | [README](config-externalized/README.md) |
+| `config-jasypt` | `ENC(...)` values; master password from the environment | [README](config-jasypt/README.md) |
+| `config-server` | Spring Cloud Config Server (native backend) | [README](config-server/README.md) |
+| `config-client` | Config client with optional server + local fallback | [README](config-client/README.md) |
+| `config-vault` | Spring Cloud Vault + docker-compose Vault `-dev` | [README](config-vault/README.md) |
+| `config-aws-parameter-store` | SSM paths via Spring Cloud AWS (LocalStack optional) | [README](config-aws-parameter-store/README.md) |
+| `config-kubernetes` | ConfigMap/Secret manifests bound as env vars | [README](config-kubernetes/README.md) |
 
 ## Prerequisites
 
 - **Java 21+**
 - **Maven Wrapper** (`./mvnw`) — no global Maven install required
-- **Docker** (optional) for Chapter 8 Vault and Chapter 9 LocalStack
-- **kubectl** (optional) for Chapter 10 manifests
+- **Docker** (optional) for `config-vault` and `config-aws-parameter-store` LocalStack
+- **kubectl** (optional) for `config-kubernetes` manifests
 
 ## How To Run
 
@@ -46,11 +46,11 @@ Never commit real secrets. This repo uses obvious placeholders (`changeme`, docu
 # Build and test everything
 ./mvnw -B verify
 
-# Run one chapter (example)
-./mvnw -pl chapter-01-properties-yaml spring-boot:run
+# Run one module (example)
+./mvnw -pl config-yaml spring-boot:run
 ```
 
-Chapter READMEs list ports, profiles, and optional Docker steps.
+Module READMEs list ports, profiles, and optional Docker steps.
 
 ## Project Layout
 
@@ -59,10 +59,10 @@ spring-properties-setup-learning/
 ├── pom.xml
 ├── README.md
 ├── .github/workflows/ci.yml
-├── chapter-01-properties-yaml/
-├── chapter-02-profiles/
+├── config-yaml/
+├── config-profiles/
 ├── ...
-└── chapter-10-kubernetes/
+└── config-kubernetes/
 ```
 
 ## Security Notes

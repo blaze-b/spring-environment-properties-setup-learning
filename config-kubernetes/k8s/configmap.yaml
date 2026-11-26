@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: props-learning-config
+  labels:
+    app: config-kubernetes
+data:
+  WORKLOAD_ENVIRONMENT_NAME: staging
+  WORKLOAD_DB_URL: jdbc:postgresql://postgres:5432/config_learning

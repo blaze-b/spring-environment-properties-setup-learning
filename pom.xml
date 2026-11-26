@@ -17,19 +17,19 @@
     <packaging>pom</packaging>
 
     <name>Spring Properties Setup Learning</name>
-    <description>Chapter-style learning repo for Spring Boot properties, configuration, and secrets management</description>
+    <description>Multi-module learning repo for Spring Boot properties, configuration, and secrets management</description>
 
     <modules>
-        <module>chapter-01-properties-yaml</module>
-        <module>chapter-02-profiles</module>
-        <module>chapter-03-configuration-properties</module>
-        <module>chapter-04-externalized-config</module>
-        <module>chapter-05-jasypt</module>
-        <module>chapter-06-config-server</module>
-        <module>chapter-07-config-client</module>
-        <module>chapter-08-vault</module>
-        <module>chapter-09-aws-parameter-store</module>
-        <module>chapter-10-kubernetes</module>
+        <module>config-yaml</module>
+        <module>config-profiles</module>
+        <module>config-configuration-properties</module>
+        <module>config-externalized</module>
+        <module>config-jasypt</module>
+        <module>config-server</module>
+        <module>config-client</module>
+        <module>config-vault</module>
+        <module>config-aws-parameter-store</module>
+        <module>config-kubernetes</module>
     </modules>
 
     <properties>
