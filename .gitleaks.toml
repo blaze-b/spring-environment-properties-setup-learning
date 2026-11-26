@@ -1,5 +1,5 @@
 # Scan the working tree for secrets. Build output and local env files are excluded.
-title = "spring-properties-setup-learning"
+title = "spring-config-learning"
 
 [extend]
 useDefault = true

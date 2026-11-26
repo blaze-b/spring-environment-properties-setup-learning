@@ -12,11 +12,11 @@
     </parent>
 
     <groupId>com.blazeb.config</groupId>
-    <artifactId>spring-properties-setup-learning</artifactId>
+    <artifactId>spring-config-learning</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Spring Properties Setup Learning</name>
+    <name>Spring Config Learning</name>
     <description>Multi-module learning repo for Spring Boot properties, configuration, and secrets management</description>
 
     <modules>

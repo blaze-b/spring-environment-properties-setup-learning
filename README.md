@@ -1,8 +1,8 @@
-# Spring Properties Setup Learning
+# Spring Config Learning
 
 Hands-on modules for Spring Boot **properties**, **profiles**, **externalised config**, and **secrets** (Jasypt, Spring Cloud Config, Vault, AWS Parameter Store, Kubernetes). Each module is a small runnable app with tests.
 
-[![CI](https://github.com/blaze-b/spring-properties-setup-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/blaze-b/spring-properties-setup-learning/actions/workflows/ci.yml)
+[![CI](https://github.com/blaze-b/spring-config-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/blaze-b/spring-config-learning/actions/workflows/ci.yml)
 
 ## Intro (basics)
 
@@ -55,7 +55,7 @@ Module READMEs list ports, profiles, and optional Docker steps.
 ## Project Layout
 
 ```text
-spring-properties-setup-learning/
+spring-config-learning/
 ├── pom.xml
 ├── README.md
 ├── .github/workflows/ci.yml
