@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+spring:
+  config:
+    import: optional:classpath:extra-config.properties
+
+app:
+  service:
+    name: externalized-demo
+    api-key: classpath-placeholder
+    feature-flag: classpath

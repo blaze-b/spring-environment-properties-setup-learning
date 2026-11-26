@@ -1,0 +1,9 @@
+# Optional LocalStack for SSM Parameter Store learning (no real AWS account required).
+services:
+  localstack:
+    image: localstack/localstack:3.7
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: ssm
+      DEFAULT_REGION: us-east-1

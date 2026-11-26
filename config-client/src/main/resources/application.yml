@@ -1,0 +1,24 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: config-client
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      fail-fast: false
+      # Disabled by default so unit tests and CI do not require a running server.
+      enabled: ${CONFIG_CLIENT_ENABLED:false}
+
+app:
+  message: Local fallback message (config server disabled)
+  feature:
+    widgets-enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh

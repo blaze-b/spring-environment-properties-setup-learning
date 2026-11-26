@@ -1,0 +1,16 @@
+# Scan the working tree for secrets. Build output and local env files are excluded.
+title = "spring-config-learning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+paths = [
+  '''(^|/)target/''',
+  '''(^|/)\.env$''',
+]
+# Documented Vault *dev* root token appears only in docker-compose and chapter READMEs.
+# It is the well-known HashiCorp Vault -dev default (not a real secret).
+regexes = [
+  '''root-token-for-dev-only''',
+]

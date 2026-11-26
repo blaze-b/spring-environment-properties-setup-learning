@@ -1,0 +1,4 @@
+app:
+  greeting: Hello from the dev profile
+  datasource:
+    url: jdbc:postgresql://${DB_HOSTNAME:localhost}:${DB_PORT:5432}/${DB_SCHEMA_NAME:config_learning}

@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+# YAML nests naturally. Relaxed binding still maps kebab-case keys
+# to Java bean / record property names (displayName, ownerEmail, maxRetries).
+app:
+  info:
+    display-name: Properties vs YAML Demo
+    owner-email: learner@example.com
+    max-retries: 3

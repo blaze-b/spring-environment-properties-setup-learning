@@ -1,0 +1,56 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+# Logs
+*.log
+*.log.gz
+
+# Real env files (keep *.example)
+.env
+.env.local
+**/.env
+!**/.env.example
+
+# Private keys / certs / keystores — never commit
+*.key
+*.key.der
+*.pem
+*.p12
+*.jks
+*.pfx
+*.crt
+*.cer
+*.der
+
+# Local Vault / docker data
+**/vault/data/
+**/vault/file/
+**/vault/logs/
+!**/vault/config/

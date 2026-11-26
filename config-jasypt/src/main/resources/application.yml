@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:changeme}
+    algorithm: PBEWITHHMACSHA512ANDAES_256
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+
+app:
+  secret:
+    # Ciphertext for plaintext "super-secret-db-password" / "demo-api-token-changeme"
+    # with master password "changeme" (learning only).
+    database-password: ENC(v0LzhQiWlaJLTSvgp9+ib9Ss8QoFJhR+nxS6UCtle49S+Ct+Y/OA7t3L0s66RddX5YvJT5ohTUDNrDDmoWUGqg==)
+    api-token: ENC(kD/bPoNm9X/knnjmtz/1L3DIRhl4sGW5VudBCnCxJ8KPW1u3LhkOZgvmToWYPnR4c8ZKmQ+y/Fj3Q3LC7hsf0Q==)
