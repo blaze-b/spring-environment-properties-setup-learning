@@ -1,0 +1,11 @@
+server:
+  port: 8083
+
+app:
+  mailer:
+    host: smtp.example.com
+    port: 587
+    recipients:
+      - ops@example.com
+      - oncall@example.com
+    start-tls: true

@@ -1,0 +1,9 @@
+server:
+  port: 8090
+
+# In Kubernetes these are typically supplied via ConfigMap (non-secret)
+# and Secret (sensitive) env vars — see k8s/*.yaml.
+workload:
+  environment-name: ${WORKLOAD_ENVIRONMENT_NAME:local}
+  db-url: ${WORKLOAD_DB_URL:jdbc:h2:mem:k8s-learning}
+  db-password: ${WORKLOAD_DB_PASSWORD:local-only-changeme}

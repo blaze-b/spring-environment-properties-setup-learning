@@ -1,0 +1,30 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: chapter-09-aws-parameter-store
+  cloud:
+    aws:
+      region:
+        static: us-east-1
+      parameter:
+        store:
+          enabled: false
+
+app:
+  ssm:
+    prefix: /config
+    application-name: ${spring.application.name}
+    region: us-east-1
+
+demo:
+  aws:
+    greeting: Hello from local classpath (SSM disabled)
+    db-password: local-only-changeme
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

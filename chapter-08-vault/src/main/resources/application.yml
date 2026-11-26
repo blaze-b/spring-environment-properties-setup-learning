@@ -1,0 +1,29 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: chapter-08-vault
+  cloud:
+    vault:
+      enabled: false
+
+demo:
+  secrets:
+    username: local-user
+    password: local-only-changeme
+    api-key: local-api-key-changeme
+
+vault:
+  ops:
+    kv-path: secret
+    transit-key: vault-app-key
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    vault:
+      enabled: false

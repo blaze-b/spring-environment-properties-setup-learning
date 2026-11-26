@@ -1,0 +1,4 @@
+app:
+  greeting: Hello from the local profile
+  datasource:
+    url: jdbc:h2:mem:local-learning

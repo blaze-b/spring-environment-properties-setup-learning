@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chapter-10-kubernetes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chapter-10-kubernetes
+  template:
+    metadata:
+      labels:
+        app: chapter-10-kubernetes
+    spec:
+      containers:
+        - name: app
+          image: chapter-10-kubernetes:local
+          ports:
+            - containerPort: 8090
+          envFrom:
+            - configMapRef:
+                name: props-learning-config
+            - secretRef:
+                name: props-learning-secret

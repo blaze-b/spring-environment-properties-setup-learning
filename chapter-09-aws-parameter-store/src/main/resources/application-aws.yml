@@ -1,0 +1,14 @@
+# Activate with SPRING_PROFILES_ACTIVE=aws after creating parameters in SSM or LocalStack.
+# Note: the main @SpringBootApplication excludes AWS autoconfig so CI stays offline.
+# For a live SSM demo, remove those excludes (or use a dedicated runner) and set:
+#
+# spring.config.import: optional:aws-parameterstore:/config/chapter-09-aws-parameter-store
+# spring.cloud.aws.paramstore.enabled: true
+# AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY (or the default provider chain)
+#
+# LocalStack endpoint example:
+# spring.cloud.aws.endpoint: http://127.0.0.1:4566
+
+demo:
+  aws:
+    greeting: Switch on a live SSM import to replace this local aws-profile message
