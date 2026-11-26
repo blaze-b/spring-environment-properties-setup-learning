@@ -4,16 +4,9 @@
 
 Run HashiCorp Vault in Docker (dev mode) and load secrets with **Spring Cloud Vault**.
 
-## Sources Merged Here
+## Background
 
-| Former repo | What we kept (concepts) | What we dropped |
-| --- | --- | --- |
-| `vault-demo-training` | Spring Cloud Vault TOKEN auth, KV read, transit encrypt/decrypt | BetterCloud Java driver (duplicate of Spring Vault) |
-| `lymbyc-secret-config-connector` | Loading Vault KV into the app Environment / property map | Custom Apache HttpClient REST wrapper (`org.lymbyc.leni.connect.rest`) |
-| `secret-server` | Local Vault via Docker on port 8200 | Raft data dirs, real root tokens, custom Dockerfile |
-| `secrets-management-service` (vault modules) | Same Vault learning paths | Employer-specific package names (rewritten to `com.blazeb.config.vault`) |
-
-One chapter, one stack: Spring Cloud Vault + `docker compose` Vault `-dev`.
+Concepts aligned with the public [`vault-demo-training`](https://github.com/blaze-b/vault-demo-training) sample (Spring Cloud Vault TOKEN auth, KV read, transit encrypt/decrypt), rewritten here for Spring Boot 3 with a single stack: Spring Cloud Vault + `docker compose` Vault `-dev`. Older alternate Vault clients are not carried forward.
 
 ## What You Will Learn
 

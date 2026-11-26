@@ -4,8 +4,6 @@
 
 Encrypt sensitive values in property files with Jasypt. The master password stays outside git.
 
-> Note: Brian’s “alymbyc” recollection pointed at **`lymbyc-secret-config-connector`**, which is Vault/AWS SSM — not Jasypt. This chapter is written fresh so encrypted-properties learning still lives here.
-
 ## What You Will Learn
 
 - Wrapping secrets as `ENC(...)` in YAML

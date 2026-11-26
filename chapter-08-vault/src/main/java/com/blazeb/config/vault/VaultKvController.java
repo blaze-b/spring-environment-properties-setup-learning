@@ -20,7 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 /**
  * Interactive KV + transit endpoints used when the {@code vault} profile is active.
- * Concepts merged from vault-demo-training and lymbyc Vault extractors — rewritten for Boot 3.
+ * Demonstrates Vault KV v2 and Transit operations via Spring Vault.
  */
 @RestController
 @RequestMapping("/vault")

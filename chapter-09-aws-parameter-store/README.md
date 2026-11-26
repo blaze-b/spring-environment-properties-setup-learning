@@ -2,23 +2,21 @@
 
 [Previous: Chapter 8 — Vault](../chapter-08-vault/README.md) · [Next: Chapter 10 — Kubernetes](../chapter-10-kubernetes/README.md)
 
-Load configuration from **AWS Systems Manager Parameter Store** (the non-Vault half of Brian’s `lymbyc` / AWS secrets training repos).
-
-## Sources Covered Here (distinct from Vault)
-
-| Former repo | What we kept |
-| --- | --- |
-| `lymbyc-secret-config-connector` | AWS SSM path prefix + recursive parameter loading concepts |
-| `aws-secrets-boot-training` | `/config/{app}` path layout, region, credentials-from-env |
-| `secrets-management-service` (`lymbyc-secret-spring-app`, AWS factory) | Selecting a property source (`vault` vs `aws-param-store`) — here as separate chapters 8 vs 9 |
-
-Rewritten on **Spring Cloud AWS 3** (`io.awspring.cloud`) for Boot 3. No real AWS keys are committed.
+Load configuration from **AWS Systems Manager Parameter Store** using Spring Cloud AWS 3 (`io.awspring.cloud`). No real AWS keys are committed.
 
 ## What You Will Learn
 
 - Path convention `/config/{application}/...`
 - Enabling Parameter Store via `spring.config.import=aws-parameterstore:...`
 - Using LocalStack optionally for offline practice
+
+## Key Concepts
+
+| Idea | Detail |
+| --- | --- |
+| Path layout | `/config/{app}/...` parameters map into the Spring `Environment` |
+| Credentials | Env vars or the default AWS provider chain — never commit keys |
+| Offline CI | AWS autoconfig is excluded by default so tests run without cloud access |
 
 ## How To Run
 
